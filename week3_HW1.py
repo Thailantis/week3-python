@@ -11,17 +11,12 @@
 # None
 # """
 
-with open(regex_test.txt) as f:
-  data = f.readlines()
-  print(data[0])
-  
-pattern = re.compile("([A-Z][a-z]+), ([A-Z][a-z]+) ")
+import re
 
-def president(person):
-  president_names = ["Abraham Lincoln", "Andrew P Garfield", "Connor Milliken", "Jordan Alexander Williams"]
-  
-  for person in president:
-    match = pattern.search(person)
-    
-  if match:
-    print(president(person))
+with open("regex_test.txt", "r") as file:
+    for line in file:
+        match = re.search(r"\b[A-Z][a-z]*\s[A-Z][a-z]*\b", line)
+        if match:
+            print(match.group())
+        else:
+            print(None)
