@@ -12,7 +12,7 @@ class Pokemon:
         self.image_url = image_url
 
      def print_image(self):
-        display(Image(url=self.image_url, width=300))       
+       return display(Image(url=self.image_url, width=300))       
  
 cyndaquil = Pokemon('Cyndaquil', 'Fire', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png')
 cyndaquil.print_image(Pokemon)
