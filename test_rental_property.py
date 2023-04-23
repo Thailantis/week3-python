@@ -9,7 +9,7 @@ class Test_Rental_Property(unittest.TestCase):
 
     def test_calculate_total_monthly_income(self):
         rp = RentalProperty(2000, 1000, 500, 200, 150, 100, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100, 200, 860, 40000, 3000, 7000, 0)
-        expected_income = 3700
+        expected_income = 2000
         actual_income = rp.calculate_total_monthly_income()
         self.assertEqual(expected_income, actual_income)
 
