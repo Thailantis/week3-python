@@ -1,3 +1,5 @@
+from IPython.display import clear_output
+
 class RentalProperty:
     def __init__(self, rental_income, laundry_income, storage_income, misc_income, tax, insurance, utilities, electricity, water, sewer, garbage, gas, hoa, lawn_snow_care, vacancy, repair, capex, property_management, mortage, downpayment, closing_cost, rehab_budget, misc_cost):
         self.rental_income = rental_income
