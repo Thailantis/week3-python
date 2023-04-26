@@ -30,17 +30,12 @@ print(cel_to_far)
 # Output for fib(5) => Iteration 0: 1 Iteration 1: 1 Iteration 2: 2 Iteration 3: 3 Iteration 4: 5 Iteration 5: 8
 
 def fibonacci(num):
+  for i in range(6):
+    return num + fibonacci(num + 1)
+    
   if num <= 1:
     return num
   else:
     return fibonacci(num-1) + fibonacci(num-2)
-  
-  for i in range(6):
-    if num + 1:
-        print("fibonacci(1) = 1")
-        return num
-    else:
-      print("Iteration {}: {}".append(i,fibonacci(i)))
-    return num + fibonacci(num + 1)
 
 print(fibonacci(5))
