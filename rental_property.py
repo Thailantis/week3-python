@@ -1,5 +1,3 @@
-from IPython.display import clear_output
-
 class RentalProperty:
     def __init__(self, rental_income, laundry_income, storage_income, misc_income, tax, insurance, utilities, electricity, water, sewer, garbage, gas, hoa, lawn_snow_care, vacancy, repair, capex, property_management, mortage, downpayment, closing_cost, rehab_budget, misc_cost):
         self.rental_income = rental_income
@@ -25,7 +23,10 @@ class RentalProperty:
         self.closing_cost = closing_cost
         self.rehab_budget = rehab_budget
         self.misc_cost = misc_cost
-
+    
+    def driver(self):
+        pass
+    
     def calculate_total_monthly_income(self):
         return self.rental_income + self.laundry_income + self.storage_income + self.misc_income
     
