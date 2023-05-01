@@ -24,7 +24,7 @@ class RentalProperty:
         self.rehab_budget = rehab_budget
         self.misc_cost = misc_cost
     
-    def driver(self):
+    def rental_driver(self):
         rental_income = float(input("Enter monthly rental income: "))
         laundry_income = float(input("Enter monthly laundry income: "))
         storage_income = float(input("Enter monthly storage income: "))
@@ -48,7 +48,7 @@ class RentalProperty:
         closing_cost = float(input("Enter closing cost amount: "))
         rehab_budget = float(input("Enter rehab budget amount: "))
         misc_cost =  float(input("Enter miscellaneous cost amount: "))
-        return self.driver(rental_income, laundry_income, storage_income, misc_income, tax, insurance, utilities, electricity, water, sewer, garbage, gas, hoa, lawn_snow_care, vacancy, repair, capex, property_management, mortage, downpayment, closing_cost, rehab_budget, misc_cost)
+        return self.rental_driver(rental_income, laundry_income, storage_income, misc_income, tax, insurance, utilities, electricity, water, sewer, garbage, gas, hoa, lawn_snow_care, vacancy, repair, capex, property_management, mortage, downpayment, closing_cost, rehab_budget, misc_cost)
     
     def calculate_total_monthly_income(self):
         return self.rental_income + self.laundry_income + self.storage_income + self.misc_income
