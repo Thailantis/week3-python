@@ -25,7 +25,30 @@ class RentalProperty:
         self.misc_cost = misc_cost
     
     def driver(self):
-        pass
+        rental_income = float(input("Enter monthly rental income: "))
+        laundry_income = float(input("Enter monthly laundry income: "))
+        storage_income = float(input("Enter monthly storage income: "))
+        misc_income = float(input("Enter monthly misc income: "))
+        tax = float(input("Enter monthly property tax: "))
+        insurance = float(input("Enter monthly insurance cost: "))
+        utilities = float(input("Enter monthly utilities cost: "))
+        electricity = float(input("Enter monthly electricity cost: "))
+        water = float(input("Enter monthly water cost: "))
+        sewer = float(input("Enter monthly sewer cost: "))
+        garbage = float(input("Enter monthly garbage cost: "))
+        gas = float(input("Enter monthly gas cost: "))
+        hoa = float(input("Enter monthly HOA fee: "))
+        lawn_snow_care = float(input("Enter monthly lawn/snow care cost: "))
+        vacancy = float(input("Enter monthly vacancy cost: "))
+        repair = float(input("Enter monthly repair cost: "))
+        capex = float(input("Enter monthly capital expenditures cost: "))
+        property_management = float(input("Enter monthly property_management: "))
+        mortage = float(input("Enter monthly mortage payment: "))
+        downpayment = float(input("Enter down payment amount: "))
+        closing_cost = float(input("Enter closing cost amount: "))
+        rehab_budget = float(input("Enter rehab budget amount: "))
+        misc_cost =  float(input("Enter miscellaneous cost amount: "))
+        return self.driver(rental_income, laundry_income, storage_income, misc_income, tax, insurance, utilities, electricity, water, sewer, garbage, gas, hoa, lawn_snow_care, vacancy, repair, capex, property_management, mortage, downpayment, closing_cost, rehab_budget, misc_cost)
     
     def calculate_total_monthly_income(self):
         return self.rental_income + self.laundry_income + self.storage_income + self.misc_income
@@ -46,6 +69,7 @@ class RentalProperty:
         return self.calculate_total_annual_cash_flow() / self.calculate_total_investment()
     
 rp = RentalProperty(2000, 1000, 500, 200, 500, 200, 100, 50, 50, 50, 50, 50, 50, 50, 100, 200, 500, 100, 1000, 50000, 10000, 20000, 500)
+
 total_monthly_income = rp.calculate_total_monthly_income()
 total_monthly_expenses = rp.calculate_total_monthly_expenses()
 total_monthly_cash_flow = rp.calculate_total_monthly_cash_flow()
