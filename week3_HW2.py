@@ -29,13 +29,18 @@ print(cel_to_far)
 # Write a recursion function to perform the fibonacci sequence up to the number passed in.
 # Output for fib(5) => Iteration 0: 1 Iteration 1: 1 Iteration 2: 2 Iteration 3: 3 Iteration 4: 5 Iteration 5: 8
 
-def fibonacci(num):
-  for i in range(6):
-    return num + fibonacci(num + 1)
+def fibonacci(n):
+    fib_seq = []
+    a,b = 0,1
     
-  if num <= 1:
-    return num
-  else:
-    return fibonacci(num-1) + fibonacci(num-2)
+    for i in range(n):
+        fib_seq.append(a)
+        a,b = b, a + b
+        
+    return fib_seq
 
-print(fibonacci(5))
+n = 10
+fib_seq = fibonacci(n)
+
+for i, num in enumerate(fib_seq, start=1):
+    print(f"Fibonacci number at position{i}: {num}")
